@@ -9,22 +9,13 @@ import com.mycompany.strategyexperiment.dao.experiment.listar.ListarAtaParticipa
 import com.mycompany.strategyexperiment.dao.experiment.salvar.SalvarAnexo;
 import com.mycompany.strategyexperiment.dao.experiment.salvar.SalvarAtaParticipante;
 
-public class FullDaoFactory {
-    public AbstractFullDAO getFullDaoFactory(String tipo) {
-        
-        switch (tipo) {
-            case "anexo":
-                return new AnexoFullDAO(new SalvarAnexo(),
-                                        new ListarAnexo(),
-                                        new BuscarAnexo(),
-                                        new ExcluirAnexo());
-            case "ata":
-                return new AtaParticipanteFullDAO(new SalvarAtaParticipante(),
+public class AtaParticipanteFullDaoFactory extends FullDaoFactory {
+
+    @Override
+    public AbstractFullDAO getFullDao() {
+        return new AtaParticipanteFullDAO(new SalvarAtaParticipante(),
                                                   new ListarAtaParticipante(),
                                                   new BuscarAtaParticipante(),
                                                   new ExcluirAtaParticipante());
-            default:
-                return null;
-        }
     }
 }
