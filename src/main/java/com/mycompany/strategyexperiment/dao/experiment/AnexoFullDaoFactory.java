@@ -5,7 +5,7 @@ import com.mycompany.strategyexperiment.dao.experiment.excluir.ExcluirAnexo;
 import com.mycompany.strategyexperiment.dao.experiment.listar.ListarAnexo;
 import com.mycompany.strategyexperiment.dao.experiment.salvar.SalvarAnexo;
 
-public class AnexoFullDaoFactory extends FullDaoFactory {
+public class AnexoFullDaoFactory extends AbstractFullDaoFactory {
 
     @Override
     public AbstractFullDAO getFullDao() {

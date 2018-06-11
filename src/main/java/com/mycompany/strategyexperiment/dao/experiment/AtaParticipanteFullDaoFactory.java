@@ -9,7 +9,7 @@ import com.mycompany.strategyexperiment.dao.experiment.listar.ListarAtaParticipa
 import com.mycompany.strategyexperiment.dao.experiment.salvar.SalvarAnexo;
 import com.mycompany.strategyexperiment.dao.experiment.salvar.SalvarAtaParticipante;
 
-public class AtaParticipanteFullDaoFactory extends FullDaoFactory {
+public class AtaParticipanteFullDaoFactory extends AbstractFullDaoFactory {
 
     @Override
     public AbstractFullDAO getFullDao() {
